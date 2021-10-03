@@ -293,7 +293,6 @@ class ApodMainActivity : AppCompatActivity(), View.OnClickListener,
             dayOfMonthString = "$dayOfMonth"
         }
         currentDate = "$year-$monthOfYearString-$dayOfMonthString"
-        Toast.makeText(this, "DATE IS $currentDate", Toast.LENGTH_LONG).show()
 
     }
 
