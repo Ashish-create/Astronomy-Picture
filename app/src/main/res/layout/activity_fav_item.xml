@@ -1,0 +1,124 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/apod_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/fav_apod_main_container_mb"
+    android:background="@drawable/rounded_bg"
+    android:paddingBottom="@dimen/fav_apod_main_container_pb"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/good_eve_sub_text">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/apod_main_image_cv"
+        android:layout_width="@dimen/fav_apod_main_image_cv"
+        android:layout_height="@dimen/fav_apod_main_image_h"
+        android:layout_marginTop="@dimen/fav_apod_main_image_mt"
+        android:elevation="@dimen/fav_apod_main_image_cv_elevation"
+        app:cardCornerRadius="@dimen/fav_apod_main_image_cv_radius"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/apod_date">
+
+
+        <ImageView
+            android:id="@+id/apod_main_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY">
+
+        </ImageView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/apod_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fav_apod_title_ml"
+        android:layout_marginTop="@dimen/fav_apod_title_mt"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text="Day"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fav_apod_titlesize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/apod_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fav_apod_date_ml"
+        android:layout_marginTop="@dimen/fav_apod_date_mt"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text="2019-02-02"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fav_apod_date_textsize"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/apod_title" />
+
+    <!--  ExpandableTextView Container -->
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fav_expand_text_view_ml"
+        android:layout_marginTop="@dimen/fav_expand_text_view_mt"
+        android:layout_marginRight="@dimen/fav_expand_text_view_ml"
+        android:paddingRight="@dimen/fav_expand_text_view_ml"
+        app:collapseDrawable="@drawable/view_less_icon"
+        app:expandDrawable="@drawable/view_more_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/apod_main_image_cv"
+        expandableTextView:animDuration="0"
+        expandableTextView:maxCollapsedLines="2">
+
+        <!-- simple text view  -->
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fav_expandable_text_ml"
+            android:layout_marginRight="@dimen/fav_expandable_text_ml"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fav_expandable_textsize"
+            android:textStyle="normal" />
+
+        <!-- expandable ImageButton -->
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/activity_apod_card_bg_color" />
+
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+    <ImageView
+        android:id="@+id/deletefav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/deletefav_mt"
+        android:layout_marginRight="@dimen/deletefav_mr"
+        android:background="@drawable/delete_fav"
+        android:gravity="center"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

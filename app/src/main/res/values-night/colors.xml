@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="good_eve_text_color">#FFFFFF</color>
+    <color name="good_eve_sub_text_color">#F8ECEC</color>
+    <color name="activity_apod_main_bg_color">#FF000000</color>
+    <color name="activity_apod_card_bg_color">#555457</color>
+</resources>

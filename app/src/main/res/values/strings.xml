@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyApod</string>
+    <string name="astronomy_picture">Astronomy Picture</string>
+    <string name="good_eve_sub_text">Welcome User!!</string>
+    <string name="infotext">Please select  below to View Astronomy Images:</string>
+    <string name="view_fav_text">View &amp; Manage Favourites</string>
+    <string name="no_content_text">You have not saved any pictures</string>
+    <string name="datepicker_text">Select date to View picture</string>
+</resources>

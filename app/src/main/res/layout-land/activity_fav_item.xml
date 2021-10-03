@@ -1,0 +1,127 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/fav_item_cv_w"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/land_8dp"
+    android:layout_marginRight="@dimen/land_8dp"
+    android:background="@drawable/rounded_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/land_15dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/apod_main_container"
+        android:layout_width="@dimen/fav_item_cv_w"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/land_10dp"
+        android:paddingRight="@dimen/land_10dp"
+        android:paddingBottom="@dimen/land_15dp">
+
+
+        <TextView
+            android:id="@+id/apod_title"
+            android:layout_width="@dimen/apod_title_max"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/apod_title_ml_land"
+            android:layout_marginTop="@dimen/apod_title_mt_land"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/apod_titlesize"
+            android:textStyle="bold"
+            tools:text="Rainy" />
+
+        <TextView
+            android:id="@+id/apod_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/apod_title"
+            android:layout_marginLeft="@dimen/apod_date_ml_land"
+            android:layout_marginTop="@dimen/apod_date_mt_land"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/apod_date_textsize_land"
+            android:textStyle="normal"
+            tools:text="2019-02-02" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/apod_main_image_cv"
+            android:layout_width="@dimen/fav_item_cv_w"
+            android:layout_height="@dimen/fav_item_cv_h"
+            android:layout_below="@+id/apod_date"
+            android:layout_marginTop="@dimen/fav_item_cv_mt"
+            android:elevation="1dp"
+            app:cardCornerRadius="@dimen/fav_item_cv_mt">
+
+            <ImageView
+                android:id="@+id/apod_main_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY">
+
+            </ImageView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--  ExpandableTextView Container -->
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/expand_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/apod_main_image_cv"
+            android:layout_marginLeft="@dimen/expand_text_view_ml_land"
+            android:layout_marginTop="@dimen/expand_text_view_mt_land"
+            android:layout_marginRight="@dimen/expand_text_view_ml_land"
+            app:collapseDrawable="@drawable/view_less_icon"
+            app:expandDrawable="@drawable/view_more_icon"
+            expandableTextView:animDuration="0"
+            expandableTextView:maxCollapsedLines="2">
+
+            <!-- simple text view  -->
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/expandable_text_ml_land"
+                android:layout_marginRight="@dimen/expandable_text_ml_land"
+                android:textColor="@color/white"
+                android:textSize="@dimen/expandable_text_size_land"
+                android:textStyle="normal" />
+
+            <!-- expandable ImageButton -->
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/activity_apod_card_bg_color" />
+
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+        <ImageView
+            android:id="@+id/deletefav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/deletefav_mt_land"
+            android:layout_marginRight="@dimen/deletefav_mt_land"
+            android:background="@drawable/delete_fav"
+            android:gravity="center"
+            android:textOff=""
+            android:textOn=""
+            android:textSize="0dp" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
